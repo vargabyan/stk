@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="style.css">
 
 
-<div class="core-container" style="margin-top: 130px">
+<div class="core-container">
 
     <section class="breadcrumb">
         <p class="breadcrumb_home">Главная</p>

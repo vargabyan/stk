@@ -20,7 +20,7 @@ a {
 .core-container {
     margin: 0 auto;
     max-width: 1734px;
-    width: 100%;
+    width: 92%;
 }
 
 .breadcrumb {
@@ -121,8 +121,8 @@ a {
     display: grid;
     gap: 59px;
     grid-template-areas:
-    "a b"
-    "c b ";
+    "a a b"
+    "c c b";
 }
 
 .activity_events_item {
@@ -191,6 +191,54 @@ a {
 }
 
 
+.charity-news {
+    margin-top: 50px;
+}
+
+.charity-news_header {
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.charity-news_items-wrapper {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.charity-news_item {
+    width: 100%;
+    height: 460px;
+}
+
+.charity-news_item .activity_events_img {
+    object-fit: cover;
+}
+
+.charity-news_item .activity_events_description-wrapper {
+    height: unset;
+    padding: 60px 40px 50px 64px;
+}
+
+.charity-news_item .activity_events_header {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 115.5%;
+}
+
+.charity-news_item .activity_events_description {
+    font-size: 22px;
+}
+
+.charity-news_item_reade-more {
+    font-size: 18px;
+    border-bottom: solid 2px #676C7A;
+    padding-bottom: 20px;
+    width: max-content;
+}
+
+
 @media (max-width: 1220px) {
     .core-container {
         max-width: 980px;
@@ -218,6 +266,10 @@ a {
         min-width: 340px;
     }
 
+
+    .activity_events-wrapper {
+        gap: 30px;
+    }
 
     .activity {
         margin-top: 156px;
@@ -293,6 +345,47 @@ a {
 
     .activity_events_description {
         font-size: 13px;
+    }
+
+
+    .charity-news {
+        margin-top: 50px;
+    }
+
+    .charity-news_header {
+        font-size: 42px;
+    }
+
+    .charity-news_items-wrapper {
+        margin-top: 90px;
+        gap: 37px;
+    }
+
+    .charity-news_item {
+        height: 284px;
+    }
+
+    .charity-news_item .activity_img-wrapper {
+        max-width: 323px;
+    }
+
+    .charity-news_item .activity_events_description-wrapper {
+        height: unset;
+        padding: 38px 28px 28px 39px;
+        gap: 23px;
+    }
+
+    .charity-news_item .activity_events_header {
+        font-size: 28px;
+        line-height: normal;
+    }
+
+    .charity-news_item .activity_events_description {
+        font-size: 13px;
+    }
+
+    .charity-news_item_reade-more {
+        font-size: 12px;
     }
 }
 
@@ -392,5 +485,51 @@ a {
 
     .activity_events_description {
         font-size: 16px;
+    }
+
+
+    .charity-news {
+        margin-top: 40px;
+    }
+
+    .charity-news_header {
+        font-size: 42px;
+        font-weight: 500;
+        line-height: 115.5%;
+    }
+
+    .charity-news_items-wrapper {
+        margin-top: 70px;
+        gap: 30px;
+    }
+
+    .charity-news_item {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .charity-news_item .activity_img-wrapper {
+        max-width: 100%;
+    }
+
+    .charity-news_item .activity_events_description-wrapper {
+        height: unset;
+        padding: 30px 16px 31px 28px;
+        gap: 22px;
+    }
+
+    .charity-news_item .activity_events_header {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 150.5%;
+    }
+
+    .charity-news_item .activity_events_description {
+        font-size: 16px;
+        line-height: 150%
+    }
+
+    .charity-news_item_reade-more {
+        display: none;
     }
 }
