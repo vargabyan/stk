@@ -12,7 +12,7 @@
 
     <section class="charity-program">
         <div class="charity-program_description-wrapper">
-            <p class="charity-program_header">Благотворительная программа</p>
+            <p class="charity-program_header">Благотворитель<br class="line-break">ная программа</p>
             <p class="charity-program_description">Мы развиваем культуру благотворительности, объединяя вокруг себя активных творческих профессионалов, которые участвуют в решении общественно значимых задач и добиваются устойчивых социальных изменений. Мы открываем возможности для появления новых идей и создаем условия для их воплощения.</p>
         </div>
         <img class="charity-program_img" src="/images/Rectangle%201650.png" alt="">

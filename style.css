@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
     color: #212C33;
     font-family: Onest;
 }
 
-p {
+p, ul {
     margin: 0;
 }
 
@@ -59,6 +61,7 @@ a {
 .charity-program_header {
     font-size: 72px;
     font-weight: 500;
+    display: flex;
 }
 
 .charity-program_description {
@@ -195,6 +198,10 @@ a {
     margin-top: 50px;
 }
 
+.line-break {
+    display: none;
+}
+
 .charity-news_header {
     font-size: 72px;
     font-weight: 500;
@@ -209,7 +216,7 @@ a {
 
 .charity-news_item {
     width: 100%;
-    height: 460px;
+    height: 100%;
 }
 
 .charity-news_item .activity_events_img {
@@ -229,13 +236,157 @@ a {
 
 .charity-news_item .activity_events_description {
     font-size: 22px;
+    height: 85px;
+    overflow: hidden;
+}
+
+.charity-news_item .activity_events_description-open {
+    height: 100%;
 }
 
 .charity-news_item_reade-more {
     font-size: 18px;
+    border: none;
     border-bottom: solid 2px #676C7A;
     padding-bottom: 20px;
     width: max-content;
+    cursor: pointer;
+    background: unset;
+}
+
+
+.charity-article_header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.charity-article_header {
+    font-size: 72px;
+    font-weight: 500;
+    min-width: 540px;
+}
+
+.charity-article_header_img {
+    max-width: 930px;
+    min-width: 340px;
+    border-radius: 11px;
+    height: 100%;
+}
+
+.charity-article {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.charity-article_items-wrapper {
+    max-width: 1088px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.charity-article_item {
+    width: 100%;
+}
+
+.charity-article_item_header {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 115.5%
+}
+
+.charity-article_item_img {
+    max-width: 1088px;
+    max-height: 666px;
+    border-radius: 11px;
+    margin-top: 87px;
+    width: 100%;
+}
+
+.charity-article_item_description {
+    font-size: 22px;
+    margin-top: 60px;
+}
+
+
+.charity-article_teg-wrapper {
+    padding: 40px 30px;
+    font-size: 22px;
+    border-radius: 11px;
+    background: #F4F4F4;
+    display: flex;
+    max-width: 487px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 45px;
+    white-space: nowrap;
+}
+
+.charity-article_teg_header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #676C7A;
+}
+
+.charity-article_teg_header:before {
+    width: 14px;
+    height: 14px;
+    content: '';
+    display: block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15' viewBox='0 0 14 15' fill='none'%3E%3Ccircle cx='6.66667' cy='7.50065' r='6.66667' fill='%23EE1A26'/%3E%3C/svg%3E");
+}
+
+.charity-article_teg_items-wrapper {
+    list-style: decimal;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.activity-mobile-slider {
+    max-width: 340px;
+    margin-top: 90px;
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.activity-mobile-slider_button-wrapper {
+    display: flex;
+    gap: 16px;
+}
+
+.activity-mobile-slider .activity_teg {
+    display: none;
+}
+
+.activity-mobile-swiper {
+    width: 340px;
+    height: 100%;
+}
+
+.activity-mobile-slider_buttons {
+    display: block;
+    content: '';
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.activity-mobile-slider_buttons.back {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' viewBox='0 0 45 45' fill='none'%3E%3Crect x='44.3333' y='43.6536' width='43.6667' height='42.9849' rx='21.4924' transform='rotate(-180 44.3333 43.6536)' stroke='%23D1D1D1' stroke-width='1.33333'/%3E%3Cpath d='M17.7203 21.7228L28.5848 21.721C28.7405 21.7211 28.8899 21.7829 28.9999 21.893C29.11 22.0031 29.1719 22.1524 29.1719 22.3081C29.1719 22.4638 29.11 22.6131 28.9999 22.7232C28.8899 22.8332 28.7405 22.8951 28.5848 22.8951L17.7203 22.8933L22.8878 28.0608C22.9976 28.1706 23.0593 28.3196 23.0593 28.4749C23.0593 28.6302 22.9976 28.7792 22.8878 28.889C22.7779 28.9988 22.629 29.0605 22.4736 29.0605C22.3183 29.0605 22.1694 28.9988 22.0595 28.889L15.8927 22.7222C15.7829 22.6124 15.7212 22.4634 15.7212 22.3081C15.7212 22.1527 15.7829 22.0038 15.8927 21.894L22.0595 15.7271C22.1694 15.6173 22.3183 15.5556 22.4736 15.5556C22.629 15.5556 22.7779 15.6173 22.8878 15.7271C22.9976 15.837 23.0593 15.9859 23.0593 16.1412C23.0593 16.2966 22.9976 16.4455 22.8878 16.5554L17.7203 21.7228Z' fill='%23212C33'/%3E%3C/svg%3E");
+}
+
+.activity-mobile-slider_buttons.next {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' viewBox='0 0 45 45' fill='none'%3E%3Crect x='0.666667' y='0.986979' width='43.6667' height='42.9849' rx='21.4924' stroke='%23D1D1D1' stroke-width='1.33333'/%3E%3Cpath d='M27.2797 22.9178L16.4152 22.9196C16.2595 22.9196 16.1101 22.8577 16.0001 22.7476C15.89 22.6376 15.8281 22.4882 15.8281 22.3326C15.8281 22.1769 15.89 22.0275 16.0001 21.9175C16.1101 21.8074 16.2595 21.7455 16.4152 21.7455L27.2797 21.7473L22.1122 16.5798C22.0024 16.47 21.9407 16.321 21.9407 16.1657C21.9407 16.0104 22.0024 15.8614 22.1122 15.7516C22.2221 15.6418 22.371 15.5801 22.5264 15.5801C22.6817 15.5801 22.8306 15.6418 22.9405 15.7516L29.1073 21.9184C29.2171 22.0283 29.2788 22.1772 29.2788 22.3326C29.2788 22.4879 29.2171 22.6368 29.1073 22.7467L22.9405 28.9135C22.8306 29.0233 22.6817 29.085 22.5264 29.085C22.371 29.085 22.2221 29.0233 22.1122 28.9135C22.0024 28.8037 21.9407 28.6547 21.9407 28.4994C21.9407 28.3441 22.0024 28.1951 22.1122 28.0853L27.2797 22.9178Z' fill='%23212C33'/%3E%3C/svg%3E");
 }
 
 
@@ -387,6 +538,24 @@ a {
     .charity-news_item_reade-more {
         font-size: 12px;
     }
+
+
+
+    .charity-article {
+        flex-direction: column-reverse;
+        gap: 70px;
+    }
+
+    .charity-article_header {
+        font-size: 42px;
+        font-weight: 500;
+        line-height: 115.5%;
+        min-width: 340px;
+    }
+
+    .charity-article_item_img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -492,10 +661,19 @@ a {
         margin-top: 40px;
     }
 
+    .line-break {
+        display: block;
+    }
+
     .charity-news_header {
         font-size: 42px;
         font-weight: 500;
         line-height: 115.5%;
+    }
+
+    .activity_link-all-events.close {
+        position: unset;
+        margin: 0;
     }
 
     .charity-news_items-wrapper {
@@ -526,10 +704,70 @@ a {
 
     .charity-news_item .activity_events_description {
         font-size: 16px;
-        line-height: 150%
+        line-height: 150%;
+        height: 100%;
     }
 
     .charity-news_item_reade-more {
         display: none;
+    }
+
+
+    .charity-article_header-wrapper {
+        flex-direction: column;
+    }
+
+    .charity-article_header_img {
+        max-width: 340px;
+        min-width: 320px;
+    }
+
+
+    .charity-article_teg-wrapper {
+        max-width: 360px;
+        height: 25px;
+        padding: 20px 10px;
+        overflow: hidden;
+        background: unset;
+        border-top: 2px solid #D1D1D1;
+        border-bottom: 2px solid #D1D1D1;
+        display: flex;
+    }
+
+    .charity-article_teg-wrapper.open{
+        height: 100%;
+    }
+
+
+    .charity-article_activity {
+        display: none;
+    }
+
+    .charity-article_teg_header {
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .charity-article_teg_header:before {
+        display: none;
+    }
+
+    .charity-article_teg_header:after {
+        display: block;
+        content: '';
+        width: 17px;
+        height: 17px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Crect y='8' width='17' height='1' fill='%23EE1A26'/%3E%3Crect x='9' width='17' height='1' transform='rotate(90 9 0)' fill='%23EE1A26'/%3E%3C/svg%3E");
+    }
+
+    .charity-article_teg_header.open:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Crect x='9' width='17' height='1' transform='rotate(90 9 0)' fill='%232596be'/%3E%3C/svg%3E");
+        transform: rotate(-90deg);
+        transition: 0.3s ;
+    }
+
+
+    .activity-mobile-slider {
+        display: flex;
     }
 }
