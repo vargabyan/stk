@@ -771,3 +771,1495 @@ a {
         display: flex;
     }
 }
+
+
+/* reset */
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, nav, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 360px;
+    overflow-x: hidden;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,nav,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* constants */
+:root{
+    --color-bg: #F4F4F4;
+    --color-header: #FFFFFF;
+    --color-text: #676C7A;
+    --color-text-secondary: #9A9A9A;
+    --color-text-button: #212C33;
+    --color-title: #212C33;
+    --color-primary: #EE1A26;
+    --color-accent: #212C33;
+    --color-decor: #F4F4F4;
+    --font-size: 20px;
+    --font-size-button: 16px;
+}
+
+
+/* base */
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    line-height: 1.5;
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Onest';
+    font-size: var(--font-size);
+    font-weight: 400;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex:1;
+    row-gap: 100px;
+    margin-top: 150px;
+}
+
+.container{
+    max-width: 1710px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: Onest;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--color-title);
+}
+
+h2{
+    font-family: Onest;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-title);
+}
+
+.button{
+    white-space: nowrap;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    will-change: transform;
+}
+
+.button:hover{
+    transform: translateY(2%);
+}
+
+.button:active{
+    transform: translateY(3%);
+}
+
+.button_colored{
+    padding: 36px;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+
+.button_colored:hover{
+    opacity: 0.8;
+}
+
+.button_bordered{
+    padding: 12px 30px;
+    font-family: Onest;
+    font-weight: 400;
+    font-size: var(--font-size-button);
+    line-height: 150%;
+    background: transparent;
+    border: 1px solid var(--color-text);
+    border-radius: 65px;
+    color: var(--color-text-button);
+}
+
+.button_bordered:hover{
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+a{
+    color: var(--color-primary);
+}
+
+a:hover,
+button:hover{
+    transition: all .3s ease-in-out;
+}
+
+
+.logo{
+    cursor: pointer;
+    padding: 5px 7px;
+    border-radius: 10px;
+    border: 1px solid #C9C9C9;
+}
+
+.logo img{
+    display: block;
+    width: 55px;
+    height: auto;
+}
+
+
+/* about */
+.about__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+    padding-right: 80px;
+    padding-left: 80px;
+    background-color: transparent;
+}
+
+.about__title{
+    max-width: 628px;
+    width: 100%;
+}
+
+.about__subtitle{
+    font-size: 18px;
+    color: var(--color-text-secondary);
+    margin-bottom: 50px;
+}
+
+.about__text{
+    max-width: 628px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-bottom: 30px;
+}
+
+.about__text .about__subtitle{
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 27px;
+}
+
+.about__text .about__subtitle::before{
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color:  var(--color-primary);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* info */
+.info__container{
+    padding: 90px 100px;
+    border-radius: 20px;
+    background-color: var(--color-header);
+}
+
+.info__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.info__title h2{
+    max-width: 800px;
+    width: 100%;
+}
+
+.info__subtitle{
+    max-width: 370px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+}
+
+.info__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.info__item{
+    width: 100%;
+    padding: 35px 25px 27px 25px;
+    border-radius: 10px;
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 30px;
+}
+
+.info__item-subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin-bottom: 88px;
+}
+
+.info__item-title{
+    font-size: 66px;
+    font-weight: 400;
+    line-height: 115%;
+    color: var(--color-title);
+    text-align: right;
+    align-self: flex-end;
+}
+
+.info__item-title_color{
+    color: var(--color-primary);
+}
+
+.info__item-title span{
+    color: rgba(33, 44, 51, 0.4);
+}
+
+.info__item-title_color span{
+    color: #F19CA1;
+}
+
+.info__item-decor{
+    width: 100%;
+    height: 1px;
+    background-color: #D1D1D1;
+}
+
+.info__item-text{
+    font-size: 20px;
+    color: #141414;
+}
+
+/* total */
+.total{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../images/total-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.total__container{
+    padding: 130px 124px 96px 92px;
+    border-radius: 20px;
+    background-color: var(--color-header);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 70px;
+}
+
+.total__container h2{
+    display: none;
+}
+
+.total__subtitle{
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.total__subtitle br{
+    display: none;
+}
+
+.total__title{
+    font-size: 440px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-title);
+}
+
+.total__text{
+    font-size: 72px;
+    font-weight: 500;
+    color: var(--color-primary);
+    align-self: flex-end;
+}
+
+/* video */
+.video__container{
+    /* height: 850px; */
+    border-radius: 100px;
+    position: relative;
+}
+
+.video__container h2{
+    display: none;
+}
+
+.video__title{
+    position: absolute;
+    bottom: 20px;
+    left: 90px;
+    font-size: 48px;
+    font-weight: 400;
+    color: white;
+    z-index: 10;
+}
+
+.video__title_hidden{
+    visibility: hidden;
+}
+
+.video__time{
+    position: absolute;
+    bottom: 20px;
+    right: 98px;
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+    z-index: 10;
+}
+
+.video__time_hidden{
+    visibility: hidden;
+}
+
+.button_play {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.video-block {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.video-block::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.video-block_played::before{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.video-block__content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-block__play {
+    background-image: url('../images/play.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    width: 193px;
+    height: 192px;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.video-block__play_played {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* mission */
+.mission{
+    background-color: var(--color-accent);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.mission__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+    padding-right: 80px;
+    padding-left: 80px;
+    background-color: transparent;
+}
+
+.mission__title{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 44px;
+}
+
+.mission__title h2{
+    color: white;
+}
+
+.mission__subtitle{
+    font-size: 18px;
+    color: var(--color-text-secondary);
+}
+
+.mission__text{
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 44px;
+    color:white;
+}
+
+.mission__text-title{
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 115%;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.mission__text p{
+    font-size: 22px;
+    color: #F4F4F4;
+}
+
+.mission__text .mission__subtitle{
+    position: relative;
+    padding-left: 27px;
+}
+
+.mission__text .mission__subtitle::before{
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color:  var(--color-primary);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* direction */
+.direction__container{
+    padding: 100px 98px 100px 90px;
+    background-color: var(--color-header);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+}
+
+.direction__title{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 30px;
+}
+
+.direction__subtitle{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-secondary)
+}
+
+.direction__title h2{
+    margin-bottom: 22px;
+}
+
+.button_link{
+    padding: 21px 32px 21px 19px;
+    border: 1px solid #D1D1D1;
+    color: var(--color-text-button);
+    gap: 10px;
+}
+
+.button_link:hover{
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.button_link:hover span{
+    color: var(--color-primary);
+}
+
+.button_link span{
+    color: var(--color-title);
+}
+
+.button_link img{
+    width: 9px;
+    height: 11px;
+}
+
+.direction__info{
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 28px;
+}
+
+.direction__info .direction__subtitle{
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 24px;
+}
+
+.direction__info .direction__subtitle::before{
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color:  var(--color-primary);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.direction__info-container{
+    display: flex;
+    align-items: stretch;
+    gap: 28px;
+    width: 100%;
+}
+
+.direction__item{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    padding: 28px 28px 77px 28px;
+    background-color: var(--color-bg);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    row-gap: 10px;
+}
+
+.direction__item-title{
+    min-height: 95px;
+}
+
+.direction__item-title p{
+    width: fit-content;
+    padding: 9px 17px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-title);
+    border-radius: 10px;
+    border: 1px solid#D1D1D1;
+    background-color: #FFF;
+}
+
+.direction__item-text{
+    font-size: 18px;
+}
+
+/* finance */
+.finance__container{
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.finance__subtitle{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+}
+
+.finance__container h2{
+    margin-bottom: 43px;
+}
+
+.finance__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 17px;
+}
+
+.finance__item{
+    width: 100%;
+    position: relative;
+    padding: 28px 22px 22px 22px;
+    border-radius: 9px;
+    border: 1px solid #D1D1D1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 25px;
+}
+
+.finance__item-subtitle{
+    min-height: 90px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-title);
+    margin-bottom: 10px;
+}
+
+.finance__item-title{
+    font-size: 59px;
+    font-weight: 400;
+    line-height: 115%;
+    color: var(--color-title);
+    text-align: right;
+    align-self: flex-end;
+    white-space: nowrap;
+}
+
+.finance__item-title span{
+    color: #D1D1D1;
+}
+
+.finance__item-decor{
+    width: 100%;
+    height: 1px;
+    background-color: #D1D1D1;
+}
+
+.finance__item-text{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* geography */
+.geography__container{
+    padding: 110px 97px 97px 90px;
+    border-radius: 20px;
+    background-color: var(--color-header);
+    overflow-x: hidden;
+}
+
+.geography__subtitle{
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 32px;
+}
+
+.geography__subtitle::before{
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color:  var(--color-primary);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.geography h2{
+    margin-bottom: 40px;
+}
+
+.geography__button{
+    display: flex;
+    gap: 17px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+}
+
+.button_tab{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.button_tab:hover{
+    color: var(--color-text);
+}
+
+.button_tab_active{
+    color: var(--color-text);
+}
+
+.geography__image{
+    position: relative;
+    width: fit-content;
+    margin-top: -5px;
+    margin-left: auto;
+}
+
+.geography__image-general{
+    max-width: 1165px;
+    width: 100%;
+    height: auto;
+}
+
+.geography__image-secondary{
+    position: absolute;
+    width: 48px;
+    height: auto;
+    transition: all .3s ease-in-out;
+}
+
+.geography__image-secondary_one{
+    top: 220px;
+    left: 300px;
+}
+
+.geography__image-secondary_two{
+    top: 340px;
+    left: 230px;
+}
+
+.geography__title{
+    margin-top: 72px;
+}
+
+.geography__partners{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.geography__partners-item{
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.geography__partners-item img{
+    object-fit: cover;
+    width: 70%;
+    height: auto;
+}
+
+.geography__partners-item_big img{
+    width: 100%;
+}
+
+@keyframes active{
+    0%{
+        transform: translateY(5%);
+    }
+    50%{
+        transform: translateY(-5%);
+    }
+    100%{
+        transform: translateY(5%);
+    }
+}
+
+.geography__image-secondary_active{
+    width: 80px;
+    animation-name: active;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.geography__title{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+}
+
+/* fund */
+.fund__container{
+    padding: 100px 72px 100px 90px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.fund__info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 60px;
+}
+
+.fund__info-subtitle{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.fund__info-text{
+    margin-top: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 24px;
+}
+
+.fund__info-title{
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.fund__info-data{
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-title);
+}
+
+.fund__info-data-position{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+}
+
+.fund__info-contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 17px;
+}
+
+.fund__info-contacts a{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--color-title);
+}
+
+.fund__speech{
+    max-width: 785px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 50px;
+}
+
+.fund__speech-subtitle{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin-bottom: 10px;
+}
+
+.fund__speech-title{
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--color-title);
+}
+
+.fund__speech-text{
+    font-size: 28px;
+    font-weight: 400;
+    color: #1E1E1E;
+}
+
+
+@media (max-width: 1800px){
+    .button_bordered{
+        padding: 8px 14px;
+    }
+    .about,
+    .info,
+    .direction,
+    .geography,
+    .fund {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .total__container{
+        margin: 40px 15px;
+    }
+    .finance__item-title{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1439px){
+    .total__subtitle{
+        font-size: 30px;
+    }
+    .total__title{
+        font-size: 250px;
+    }
+    .total__text{
+        font-size: 60px;
+    }
+    .direction__container{
+        flex-direction: column;
+    }
+    .direction__info{
+        max-width: 100%;
+    }
+    .finance__info{
+        flex-wrap: wrap;
+    }
+    .finance__item{
+        width: 50%;
+        background-color: white;
+    }
+    .geography__image{
+        margin: 20px auto 0 auto;
+        width: 700px;
+    }
+    .geography__image-secondary{
+        width: 30px;
+    }
+    .geography__image-secondary_one{
+        top: 140px;
+        left: 200px;
+    }
+    .geography__image-secondary_two{
+        top: 200px;
+        left: 140px;
+    }
+    .geography__image-secondary_active{
+        width: 40px;
+    }
+}
+
+@media (max-width: 1200px){
+    main{
+        row-gap: 60px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    .about__container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .info__container{
+        padding: 40px 15px;
+    }
+    .info__item{
+        padding: 18px;
+        row-gap: 7px;
+    }
+    .info__item-subtitle{
+        margin-bottom: 0;
+    }
+    .info__item-title{
+        font-size: 50px;
+        margin-bottom: 13px;
+    }
+    .info__item-text{
+        margin-top: 4px;
+    }
+    .info__subtitle{
+        font-size: 18px;
+    }
+    .total__container{
+        padding: 30px 20px 30px 30px;
+        row-gap: 34px;
+    }
+    .total__subtitle br{
+        display: block;
+    }
+    .mission__container{
+        padding: 40px 15px;
+    }
+    .direction__container{
+        padding: 40px 15px;
+    }
+    .finance__container{
+        padding: 0 15px;
+    }
+    .geography__container{
+        padding: 40px 15px;
+    }
+    .geography__partners{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .geography__partners-item{
+        width: 74px;
+    }
+    .fund__container{
+        padding: 40px 15px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 800px){
+    .about__container{
+        flex-direction: column;
+        gap: 32px;
+    }
+    .about__title{
+        max-width: 100%;
+    }
+    .about__subtitle{
+        margin-bottom: 14px;
+    }
+    .about__text{
+        row-gap: 20px;
+        margin-bottom: 0;
+        max-width: 100%;
+    }
+    .about__text .about__subtitle{
+        margin-bottom: 0;
+    }
+    .info__title{
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+    .info__block{
+        flex-direction: column;
+    }
+    .info__item-title{
+        align-self: start;
+        text-align: left;
+    }
+    .info__item-title br{
+        display: none;
+    }
+    .total{
+        padding: 0;
+    }
+    .total__title{
+        font-size: 102px;
+        line-height: 0.7;
+    }
+    .total__text{
+        font-size: 40px;
+    }
+    /* .video__container{
+        height: auto;
+        aspect-ratio: 16/9;
+    }     */
+    .video__title{
+        bottom: 5px;
+        left: 30px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .video__time{
+        bottom: 5px;
+        right: 30px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .video-block {
+        border-radius: 20px;
+    }
+    .video-block__play {
+        width: 116px;
+        height: 116px;
+    }
+    .mission{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .mission__container{
+        flex-direction: column;
+        row-gap: 33px;
+    }
+    .direction__info-container{
+        flex-direction: column;
+    }
+    .direction__item{
+        padding: 18px;
+        min-height: auto;
+        row-gap: 16px;
+    }
+    .direction__item-title{
+        min-height: auto;
+    }
+    .direction__item-title p{
+        padding: 10px 19px;
+        border-radius: 8px;
+    }
+    .finance__item{
+        width: 100%;
+    }
+    .geography__button{
+        flex-direction: column;
+        align-items: start;
+        row-gap: 10px;
+    }
+    .fund__speech-title{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 440px){
+    .about,
+    .info,
+    .video,
+    .mission,
+    .direction,
+    .geography,
+    .fund{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    h1{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .menu{
+        margin-left: auto;
+    }
+    .button_bordered{
+        font-size: 10px;
+        border: 1px solid #D9D9D9;
+    }
+    .about__subtitle,
+    .about__text p{
+        font-size: 14px;
+    }
+    .info__container{
+        border-radius: 8px;
+    }
+    .info__title{
+        gap: 14px;
+        margin-bottom: 25px;
+    }
+    .info__subtitle{
+        font-size: 14px;
+    }
+    .info__block{
+        gap: 10px;
+    }
+    .info__item-subtitle{
+        font-size: 14px;
+    }
+    .info__item-title{
+        font-size: 36px;
+    }
+    .info__item-text{
+        font-size: 14px;
+    }
+    .total__container{
+        border-radius: 8px;
+    }
+    .total__subtitle{
+        font-size: 14px;
+    }
+    .total__title{
+        font-weight: 500;
+    }
+    .total__text{
+        font-size: 14px;
+    }
+    .video__container{
+        padding-left: 0;
+        padding-right: 0;
+        /* aspect-ratio: 9/16; */
+    }
+    .video-block{
+        border-radius: 8px;
+    }
+    .video__title{
+        left: 15px;
+    }
+    .video__time{
+        right: 15px;
+    }
+    .mission__subtitle{
+        font-size: 14px;
+    }
+    .mission__text{
+        row-gap: 24px;
+    }
+    .mission__text-title{
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+    .mission__text p{
+        font-size: 14px;
+    }
+    .mission__title .mission__subtitle{
+        display: none;
+    }
+    .mission__title h2{
+        font-size: 42px;
+    }
+    .direction__container{
+        border-radius: 8px;
+        gap: 22px;
+    }
+    .direction__title{
+        row-gap: 14px;
+    }
+    .direction__title h2{
+        margin-bottom: 0;
+    }
+    .direction__title .button_link{
+        display: none;
+    }
+    .direction__info{
+        row-gap: 10px;
+    }
+    .direction__info-container{
+        row-gap: 10px;
+    }
+    .direction__item{
+        border-radius: 8px;
+    }
+    .direction__item-title p{
+        font-size: 14px;
+    }
+    .direction__item-text{
+        font-size: 14px;
+    }
+    .finance__container{
+        row-gap: 14px;
+    }
+    .finance__container h2{
+        margin-bottom: 16px;
+    }
+    .finance__info{
+        gap: 10px;
+    }
+    .finance__item{
+        padding: 18px;
+        border-radius: 8px;
+        row-gap: 18px;
+    }
+    .finance__item-subtitle{
+        font-size: 14px;
+        min-height: auto;
+        margin-bottom: 0;
+    }
+    .finance__item-title{
+        font-size: 36px;
+        font-weight: 500;
+        align-self: start;
+        text-align: left;
+    }
+    .finance__item-title br{
+        display: none;
+    }
+    .finance__item-text{
+        font-size: 14px;
+    }
+    .geography__container{
+        border-radius: 8px;
+    }
+    .geography__container h2{
+        margin-bottom: 16px;
+    }
+    .geography__subtitle{
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+    .geography__button .button_tab{
+        font-size: 14px;
+    }
+    .geography__image{
+        width: 330px;
+        margin-top: 17px;
+    }
+    .geography__image-secondary{
+        width: 18px;
+    }
+    .geography__image-secondary_one{
+        top: 64px;
+        left: 92px;
+    }
+    .geography__image-secondary_two{
+        top: 96px;
+        left: 64px;
+    }
+    .geography__image-secondary_active{
+        width: 25px;
+    }
+    .geography__title{
+        font-size: 16px;
+    }
+    .geography__partners{
+        margin-top: 20px;
+    }
+    .fund__container{
+        border-radius: 8px;
+        gap: 64px;
+    }
+    .fund__info{
+        row-gap: 14px;
+    }
+    .fund__info-subtitle{
+        font-size: 14px;
+    }
+    .fund__info-title{
+        font-size: 14px;
+    }
+    .fund__info-text{
+        margin-top: 24px;
+        row-gap: 8px;
+    }
+    .fund__info-data{
+        font-size: 24px;
+    }
+    .fund__info-data-position{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .fund__info-contacts{
+        margin-top: 8px;
+    }
+    .fund__speech{
+        gap: 14px;
+    }
+    .fund__speech-subtitle{
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .fund__speech-title{
+        font-size: 24px;
+    }
+    .fund__speech-text{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .button_colored{
+        padding: 18px;
+        border-radius: 100px;
+        font-size: 14px;
+    }
+}
